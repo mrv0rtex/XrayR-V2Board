@@ -368,48 +368,49 @@ show_XrayR_version() {
 show_usage() {
     echo "XrayR 管理脚本使用方法: "
     echo "------------------------------------------"
-    echo "XrayR              - 显示管理菜单 (功能更多)"
-    echo "XrayR start        - 启动 XrayR"
-    echo "XrayR stop         - 停止 XrayR"
-    echo "XrayR restart      - 重启 XrayR"
-    echo "XrayR status       - 查看 XrayR 状态"
-    echo "XrayR enable       - 设置 XrayR 开机自启"
-    echo "XrayR disable      - 取消 XrayR 开机自启"
-    echo "XrayR log          - 查看 XrayR 日志"
-    echo "XrayR update       - 更新 XrayR"
-    echo "XrayR update x.x.x - 更新 XrayR 指定版本"
-    echo "XrayR install      - 安装 XrayR"
-    echo "XrayR uninstall    - 卸载 XrayR"
-    echo "XrayR version      - 查看 XrayR 版本"
+    echo "XrayR                    - Show management menu (more functions)"
+    echo "XrayR start              - Start XrayR"
+    echo "XrayR stop               - Stop XrayR"
+    echo "XrayR restart            - XrayR restart"
+    echo "XrayR status             - XrayR status"
+    echo "XrayR enable             - XrayR enable"
+    echo "XrayR disable            - XrayR disable "
+    echo "XrayR log                - XrayR log"
+    echo "XrayR update             - XrayR update"
+    echo "XrayR update x.x.x       - Update XrayR specified version"
+    echo "XrayR config             - XrayR config"
+    echo "XrayR install            - XrayR install"
+    echo "XrayR uninstall          - XrayR uninstall"
+    echo "XrayR version            - XrayR version"
     echo "------------------------------------------"
 }
 
 show_menu() {
     echo -e "
-  ${green}XrayR 后端管理脚本，${plain}${red}不适用于docker${plain}
+  ${green}XrayR backend management script, ${plain}${red} does not work with docker${plain}
 --- https://github.com/missuo/XrayR-V2Board ---
-  ${green}0.${plain} 修改配置
+  ${green}0.${plain} modify configuration
 ————————————————
-  ${green}1.${plain} 安装 XrayR
-  ${green}2.${plain} 更新 XrayR
-  ${green}3.${plain} 卸载 XrayR
+  ${green}1.${plain} install XrayR
+  ${green}2.${plain} update XrayR
+  ${green}3.${plain} Uninstall XrayR
 ————————————————
-  ${green}4.${plain} 启动 XrayR
-  ${green}5.${plain} 停止 XrayR
-  ${green}6.${plain} 重启 XrayR
-  ${green}7.${plain} 查看 XrayR 状态
-  ${green}8.${plain} 查看 XrayR 日志
+  ${green}4.${plain} Start XrayR
+  ${green}5.${plain} Stop XrayR
+  ${green}6.${plain} Restart XrayR
+  ${green}7.${plain} View XrayR Status
+  ${green}8.${plain} View XrayR logs
 ————————————————
-  ${green}9.${plain} 设置 XrayR 开机自启
- ${green}10.${plain} 取消 XrayR 开机自启
+  ${green}9.${plain} Set XrayR to start automatically
+ ${green}10.${plain} Cancel XrayR Autostart
 ————————————————
- ${green}11.${plain} 一键安装 bbr (最新内核)
- ${green}12.${plain} 查看 XrayR 版本 
- ${green}13.${plain} 升级维护脚本
+ ${green}11.${plain} One-click install bbr (latest kernel)
+ ${green}12.${plain} View XrayR Versions 
+ ${green}13.${plain} Upgrade Maintenance Script
  "
  #后续更新可加入上方字符串中
     show_status
-    echo && read -p "请输入选择 [0-13]: " num
+    echo && read -p "Please enter selection [0-13]: " num
 
     case "${num}" in
         0) config
@@ -440,7 +441,7 @@ show_menu() {
         ;;
         13) update_shell
         ;;
-        *) echo -e "${red}请输入正确的数字 [0-12]${plain}"
+        *) echo -e "${red}Please enter the correct number [0-13]${plain}"
         ;;
     esac
 }
