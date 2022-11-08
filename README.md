@@ -61,7 +61,7 @@ wget https://cdn.jsdelivr.net/gh/missuo/XrayR-V2Board/config.yml -O /etc/XrayR/c
 3. Change the username `missuo` in the link below to your own GitHub username to complete the configuration of the one-click install script command.
 ### Install Command
 ```
-bash <(curl -Ls https://cdn.jsdelivr.net/gh/missuo/XrayR-V2Board/install.sh)
+bash <(curl -Ls https://cdn.jsdelivr.net/gh/mrv0rtex/XrayR-V2Board/install.sh)
 ```
 4. Complete the basic node information on the `V2Board` panel.
 ![Screenshot](https://files.xiami.com/cpp/07d8ec1a38a5462c3afbfac41413b8af/1622434730321.png)
